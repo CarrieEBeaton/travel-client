@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { appReducers } from './state/app.reducers';
+import { appReducers } from './app-state/app.reducers';
 import { ConnectFormDirective } from './user/form-directive/connect-form.directive';
 import { UserEffects } from './user/store/effects/user.effects';
 import { UserFormContainerComponent } from './user/user-form-container/user-form-container.component';

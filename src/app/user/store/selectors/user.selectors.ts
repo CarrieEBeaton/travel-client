@@ -1,4 +1,4 @@
-import { AppState } from "src/app/state/app.state";
+import { AppState } from "src/app/app-state/app.state";
 import { UserState } from '../state/user.state';
 import { createSelector } from '@ngrx/store';
 

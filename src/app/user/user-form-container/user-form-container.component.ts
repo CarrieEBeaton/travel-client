@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
-import { AppState } from 'src/app/state/app.state';
+import { AppState } from 'src/app/app-state/app.state';
 import { User } from '../model/user';
 import { AddUpdateUser, DeleteUser, GetUser } from '../store/actions/user.actions';
 import { selectedSelectedUser } from '../store/selectors/user.selectors';

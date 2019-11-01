@@ -4,7 +4,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
 import { catchError, switchMap, tap } from 'rxjs/operators';
-import { AppState } from 'src/app/state/app.state';
+import { AppState } from 'src/app/app-state/app.state';
 import { User } from '../../model/user';
 import { UserService } from '../../user-service/user.service';
 import { AddUpdateUser, AddUpdateUserFailure, AddUpdateUserSuccess, DeleteUser, DeleteUserFailure, DeleteUserSuccess, GetUser, GetUsers, GetUsersFailure, GetUsersSuccess, GetUserSuccess, UserActionTypes, UserListRedirect } from '../actions/user.actions';

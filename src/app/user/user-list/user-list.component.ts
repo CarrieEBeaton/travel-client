@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AppState } from 'src/app/state/app.state';
+import { AppState } from 'src/app/app-state/app.state';
 import { User } from '../model/user';
 import { GetUsers } from '../store/actions/user.actions';
 import { selectUserList } from '../store/selectors/user.selectors';
