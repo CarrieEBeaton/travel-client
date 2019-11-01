@@ -19,7 +19,6 @@ export class UserFormContainerComponent implements OnInit {
   addUser: boolean;
 
   constructor(private route: ActivatedRoute,
-    private router: Router,
     private store: Store<AppState>) { }
 
   ngOnInit() {

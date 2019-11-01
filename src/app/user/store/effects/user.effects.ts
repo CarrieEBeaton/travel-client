@@ -13,7 +13,6 @@ import { AddUpdateUser, AddUpdateUserFailure, AddUpdateUserSuccess, DeleteUser, 
 export class UserEffects {
 
     constructor(private userService: UserService,
-        private store: Store<AppState>,
         private actions: Actions,
         private router: Router) {
     }
