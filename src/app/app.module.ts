@@ -1,28 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { UserListComponent } from './user/user-list/user-list.component';
-import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
-import { UserEditComponent } from './user/user-edit/user-edit.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appReducers } from './state/app.reducers';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { ConnectFormDirective } from './user/form-directive/connect-form.directive';
 import { UserEffects } from './user/store/effects/user.effects';
 import { UserFormContainerComponent } from './user/user-form-container/user-form-container.component';
-import { UserAddComponent } from './user/user-add/user-add.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserAddEditComponent } from './user/user-add-edit/user-add-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserEditComponent,
     UserFormContainerComponent,
-    UserAddComponent
+    UserAddEditComponent,
+    ConnectFormDirective
   ],
   imports: [
     BrowserModule,

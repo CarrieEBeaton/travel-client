@@ -1,11 +1,10 @@
-import { Component, OnInit, OnChanges, ChangeDetectionStrategy, ChangeDetectorRef, DoCheck, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { AppState } from 'src/app/state/app.state';
-import { selectUserList } from '../store/selectors/user.selectors';
-import { GetUsers } from '../store/actions/user.actions';
 import { Observable } from 'rxjs';
+import { AppState } from 'src/app/state/app.state';
 import { User } from '../model/user';
-import { tap, delay, startWith } from 'rxjs/operators';
+import { GetUsers } from '../store/actions/user.actions';
+import { selectUserList } from '../store/selectors/user.selectors';
 
 @Component({
   selector: 'app-user-list',

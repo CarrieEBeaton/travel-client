@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './user/user-list/user-list.component';
-import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { RouterModule, Routes } from '@angular/router';
 import { UserFormContainerComponent } from './user/user-form-container/user-form-container.component';
-import { UserAddComponent } from './user/user-add/user-add.component';
+import { UserListComponent } from './user/user-list/user-list.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'user-list', pathMatch: 'full'},
