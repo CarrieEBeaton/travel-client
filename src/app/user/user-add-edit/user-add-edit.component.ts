@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { User } from '../model/user';
+import { patternValidator } from 'src/app/shared/validators/pattern.validator';
 
 @Component({
   selector: 'app-user-add-edit',
@@ -25,7 +26,7 @@ export class UserAddEditComponent implements OnInit {
       userId: new FormControl(''),
       firstName: new FormControl(''),
       lastName: new FormControl(''),
-      email: new FormControl('')
+      email: new FormControl('', [Validators.required, patternValidator(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
     });
   }
 
