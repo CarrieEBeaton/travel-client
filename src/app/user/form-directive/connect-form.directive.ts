@@ -5,10 +5,7 @@ import { FormGroupDirective } from '@angular/forms';
 export class ConnectFormDirective {
     @Input('connectForm')
     set data(val: any) {
-        console.log('here');
-        console.log(val);
         if (val) {
-            console.log(val);
             this.formGroupDirective.form.patchValue(val);
             this.formGroupDirective.form.markAsPristine();
         }
