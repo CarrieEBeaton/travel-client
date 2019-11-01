@@ -1,0 +1,13 @@
+<ng-container *ngIf="addUser; else editUser">
+    <app-user-add (onSave)="save($event)"></app-user-add>
+</ng-container>
+
+<ng-template #editUser>
+    <app-user-edit *ngIf="user$ | async; else loading" [userForm]="userForm" [user]="user$ | async"
+        (onSave)="save($event)" (onDelete)="remove($event)">
+    </app-user-edit>
+
+    <ng-template #loading>
+        Loading User...
+    </ng-template>
+</ng-template>

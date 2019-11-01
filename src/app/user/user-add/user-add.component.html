@@ -1,0 +1,16 @@
+<mat-card>
+    <form [formGroup]="userForm" (ngSubmit)="save(userForm.value)">
+        <div>
+            <mat-card-title>Add User</mat-card-title>
+            <mat-card-content>
+                <input matInput placeholder="User First Name" formControlName="firstName">
+                <input matInput placeholder="User Last Name" formControlName="lastName">
+                <input matInput placeholder="User Email" formControlName="email">
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Save</button>
+                <a mat-button routerLink="/user-list">Cancel</a>
+            </mat-card-actions>
+        </div>
+    </form>
+</mat-card>
